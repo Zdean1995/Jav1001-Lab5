@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Zachary Dean
+A00275392
+Life counter app for Magic the gathering
+Life in the game is basically a score right?
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--title of the project.-->
+    <TextView
+        android:id="@+id/txt_game_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mtg_life_counter"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:layout_margin="8dp" />
+
+    <!--player 1 section-->
+    <TextView
+        android:id="@+id/txt_player_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/player_1"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:layout_margin="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+
+        <!--Each player section has a plus and minus button.  The default life amount in Magic is 20-->
+
+        <Button
+            android:id="@+id/btn_player_1_increase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/txt_player_1_score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/life_default"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_player_1_decrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minus" />
+    </LinearLayout>
+
+    <!--Player 2 section-->
+    <TextView
+        android:id="@+id/txt_player_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/player_2"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:layout_margin="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="8dp">
+
+        <Button
+            android:id="@+id/btn_player_2_increase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plus"  />
+
+        <TextView
+            android:id="@+id/txt_player_2_score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/life_default"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_player_2_decrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minus" />
+    </LinearLayout>
+
+    <!--section for changing the life change amount.  Options are 1, 5, and 10.-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/txt_life_change_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/life_change_amount"
+            android:textSize="25sp"
+            android:gravity="center"/>
+
+        <Spinner
+            android:id="@+id/spn_change_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:entries="@array/score_array" />
+    </LinearLayout>
+
+    <!--button to reset the life total back to 20-->
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_reset"
+        android:layout_margin="8dp"/>
+</LinearLayout>

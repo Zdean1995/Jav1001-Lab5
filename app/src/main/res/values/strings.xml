@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ZacharyDean_Score</string>
+    <string name="life_default">20</string>
+    <string name="mtg_life_counter">MTG Life Counter</string>
+    <string name="player_1">Player 1</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="life_change_amount">Life Change Amount</string>
+    <string name="player_2">Player 2</string>
+    <string name="btn_reset">Reset</string>
+</resources>
